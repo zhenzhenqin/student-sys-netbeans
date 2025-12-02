@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Tue Dec 02 16:31:23 CST 2025:
+Tue Dec 02 16:36:01 CST 2025:
 正在使用类加载程序 jdk.internal.loader.ClassLoaders$AppClassLoader@65b54208 引导数据库
-目录 D:\桌面\student-sys-netbeans\student_management_db1 中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) 实例 a816c00e-019a-de30-1095-000002fa5a58
+目录 D:\桌面\student-sys-netbeans\student_management_db1 中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) 实例 a816c00e-019a-de34-4f8c-0000028ff3f0
 已从 file:/D:/%e6%a1%8c%e9%9d%a2/db-derby-10.14.2.0-bin/lib/derby.jar 加载
 java.vendor=Oracle Corporation
 java.runtime.version=21.0.9+7-LTS-338
