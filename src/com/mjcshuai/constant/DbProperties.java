@@ -10,7 +10,7 @@ public class DbProperties {
 
 
     //DerBy数据库连接配置
-    public static final String Derby_URL = "jdbc:derby:student_management_db1;create=true";
+    public static final String Derby_URL = "jdbc:derby:student_management_db;create=true";
     public static final String Derby_USERNAME = "";
     public static final String Derby_PASSWORD = "";
     public static final String Derby_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
