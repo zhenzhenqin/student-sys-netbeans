@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
  * author:mjc
  * date:2025-11-21
  */
-@Data
+/*@Data
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor*/
 public class Teacher {
     //教师id
     private Integer id;
@@ -25,4 +25,64 @@ public class Teacher {
     private Integer age;
     //教师密码
     private String password;
+
+    public Teacher(Integer id, String name, String sex, String title, Integer age, String password) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.title = title;
+        this.age = age;
+        this.password = password;
+    }
+
+    public Teacher() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

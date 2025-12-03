@@ -41,6 +41,19 @@ AI 集成框架: LangChain4j (0.35.0)
    登录界面支持键盘快捷键（右键切换角色，回车登录）。
 
 
+
+关于github仓库：伟大的[zhenzhenqin](https://github.com/zhenzhenqin "zhenzhenqin的github仓库")
+
+netbeans地址：https://github.com/zhenzhenqin/student-sys-netbeans （无提交记录，移植后一次上传）
+
+![image-20251204002419964](REDEME.assets/image-20251204002419964.png)
+
+idea版本：https://github.com/zhenzhenqin/student-sys （有提交记录）
+
+**![image-20251204003131617](REDEME.assets/image-20251204003131617.png)**
+
+
+
 🚀 快速开始
 环境要求
 JDK 21 或更高版本
@@ -78,6 +91,7 @@ ChatLanguageModel model = OpenAiChatModel.builder()
 .apiKey("YOUR_OPENAI_API_KEY")        // 你的 API Key
 .modelName("gpt-4o-mini")
 .build();
+
 📂 项目结构
 com.mjcshuai
 ├── constant    // 常量定义 (数据库配置, SQL脚本路径, 提示词)
@@ -88,5 +102,6 @@ com.mjcshuai
 ├── util        // 工具类 (数据库连接, 图标加载, 用户上下文)
 ├── view        // 视图层 (Swing 窗口: LoginFrame, MainFrame 等)
 └── App.java    // 程序启动入口
+
 🤝 贡献
 欢迎提交 Issue 和 Pull Request！ GitHub 仓库: https://github.com/zhenzhenqin/student-sys

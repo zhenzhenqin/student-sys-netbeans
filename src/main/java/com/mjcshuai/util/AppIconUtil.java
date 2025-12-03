@@ -29,7 +29,8 @@ public class AppIconUtil {
                 appIcon = new ImageIcon(iconUrl).getImage();
             }
         } catch (Exception e) {
-            log.error("Unable to load the application icon: " + e.getMessage());
+            //log.error("Unable to load the application icon: " + e.getMessage());
+            e.printStackTrace();
         }
         return appIcon;
     }

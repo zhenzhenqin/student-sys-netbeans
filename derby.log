@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Tue Dec 02 17:53:38 CST 2025:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-019a-de7b-5f38-00000296c590 
-on database directory D:\桌面\student-sys-ai-maven\student_management_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@6bc7c054 
+Thu Dec 04 00:15:16 CST 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-019a-e4ff-216f-00000285eb78 
+on database directory D:\桌面\新建文件夹\student-sys-ai-maven\student_management_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@6bc7c054 
 Loaded from file:/C:/Users/33784/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=21.0.9+7-LTS-338
-user.dir=D:\桌面\student-sys-ai-maven
+user.dir=D:\桌面\新建文件夹\student-sys-ai-maven
 os.name=Windows 11
 os.arch=amd64
 os.version=10.0

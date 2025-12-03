@@ -56,7 +56,7 @@ public class StudentDAOImpl implements StudentDAO {
                 student.setPassword(rs.getString("password"));
             }
         } catch (SQLException e) {
-            log.error("Student login query error: " + e.getMessage());
+            //log.error("Student login query error: " + e.getMessage());
             e.printStackTrace();
         } finally {
             //DbUtil.closeAll(conn, pstmt, rs);
@@ -94,7 +94,8 @@ public class StudentDAOImpl implements StudentDAO {
                 studentList.add(student);
             }
         } catch (SQLException e) {
-            log.error("Query all student exceptions: " + e.getMessage());
+            //log.error("Query all student exceptions: " + e.getMessage());
+            e.printStackTrace();
         } finally {
             //DbUtil.closeAll(conn, pstmt, rs);
             DerbyDbUtil.closeAll(rs,pstmt, DerbyConn);
@@ -123,7 +124,7 @@ public class StudentDAOImpl implements StudentDAO {
             pstmt.setString(4, student.getPassword());
             return pstmt.executeUpdate() > 0; // 执行成功返回true
         } catch (SQLException e) {
-            log.error("Add student exception: " + e.getMessage());
+            //log.error("Add student exception: " + e.getMessage());
             return false;
         } finally {
             //DbUtil.closeAll(conn, pstmt, null);
@@ -153,7 +154,7 @@ public class StudentDAOImpl implements StudentDAO {
             pstmt.setInt(5, student.getId());
             return pstmt.executeUpdate() > 0; // 执行成功返回true
         } catch (SQLException e) {
-            log.error("Update student exception: " + e.getMessage());
+            //log.error("Update student exception: " + e.getMessage());
             return false;
         } finally {
             //DbUtil.closeAll(conn, pstmt, null);
@@ -179,7 +180,7 @@ public class StudentDAOImpl implements StudentDAO {
             pstmt.setInt(1, id);
             return pstmt.executeUpdate() > 0; // 执行成功返回true
         } catch (SQLException e) {
-            log.error("Delete student exception: " + e.getMessage());
+            //log.error("Delete student exception: " + e.getMessage());
             return false;
         } finally {
             //DbUtil.closeAll(conn, pstmt, null);

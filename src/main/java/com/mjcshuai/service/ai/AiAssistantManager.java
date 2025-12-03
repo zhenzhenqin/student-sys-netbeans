@@ -37,7 +37,7 @@ public class AiAssistantManager {
 
     // 具体的初始化逻辑
     private static ConsultantService createService() {
-        log.info("Initializing AI service...");
+        System.out.println("Initializing AI service...");
         
         // 1. 配置大模型连接信息
         // ----------------------------------------------------------

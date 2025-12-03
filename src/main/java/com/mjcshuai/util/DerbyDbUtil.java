@@ -65,12 +65,13 @@ public class DerbyDbUtil {
                 return;
             }
 
-            log.info("Empty database detected, starting to execute initialization script...");
+            System.err.println("Empty database detected, starting to execute initialization script...");
             executeSqlScript(conn, DbProperties.SQL_FILE_PATH);
-            log.info("Database initialization completed successfully!");
+            System.err.println("Database initialization completed successfully!");
 
-        } catch (SQLException e) {
-            log.error("Database initialization check failed: " + e.getMessage(), e);
+        } catch (Exception e) {
+            //log.error("Database initialization check failed: " + e.getMessage(), e);
+            e.printStackTrace();
         } finally {
             closeAll(rs, null, conn);
         }
@@ -84,7 +85,7 @@ public class DerbyDbUtil {
     private static void executeSqlScript(Connection conn, String filePath) {
         File sqlFile = new File(filePath);
         if (!sqlFile.exists()) {
-            log.warn("Warning: Initialization SQL file not found: " + sqlFile.getAbsolutePath());
+            System.err.println("Warning: Initialization SQL file not found: " + sqlFile.getAbsolutePath());
             return;
         }
 
@@ -130,18 +131,21 @@ public class DerbyDbUtil {
             conn.commit(); // 提交事务
 
         } catch (Exception e) {
-            log.error("Error executing SQL script: " + e.getMessage(), e);
+            //log.error("Error executing SQL script: " + e.getMessage(), e);
+            
             try {
                 conn.rollback(); // 出错回滚
             } catch (SQLException ex) {
-                log.error("Transaction rollback failed: " + ex.getMessage(), ex);
+                //log.error("Transaction rollback failed: " + ex.getMessage(), ex);
+                e.printStackTrace();
             }
         } finally {
             try {
                 if (stmt != null) stmt.close();
                 conn.setAutoCommit(true); // 恢复自动提交
             } catch (SQLException e) {
-                log.error("Failed to restore auto-commit: " + e.getMessage(), e);
+                //log.error("Failed to restore auto-commit: " + e.getMessage(), e);
+                e.printStackTrace();
             }
         }
     }
@@ -173,7 +177,7 @@ public class DerbyDbUtil {
             if ("XJ015".equals(e.getSQLState())) {
                 //System.out.println("Derby 数据库正常关闭！");
             } else {
-                log.error("Derby shutdown exception: " + e.getMessage(), e);
+                System.err.println("Derby shutdown exception: " + e.getMessage());
             }
         }
     }
